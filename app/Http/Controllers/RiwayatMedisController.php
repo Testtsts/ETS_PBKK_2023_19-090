@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class RiwayatMedisController extends Controller
 {
-    public function index() {
+    public function riwayatMedis() {
         $RiwayatMedis = DB::table("riwayat_medis")->get();
-
-        return view("index", ["RiwayatMedis"=> $RiwayatMedis]);
+        $Users = DB::table("users")->get(); 
+        return view("RiwayatMedis", 
+        ["RiwayatMedis"=> $RiwayatMedis
+        // ,"users"=> $Users
+     ]);
     }
     
 }
