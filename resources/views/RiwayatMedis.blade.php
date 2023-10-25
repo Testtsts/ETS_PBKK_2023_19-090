@@ -8,7 +8,7 @@
 	<br>
  
 	<p>RiwayatMedis : {{ $RiwayatMedis }}</p>
-    <!-- <p> Users : {{$users}}</p> -->
+    <!-- <p> Users : users}}/p> -->
  
 </body>
 </html>
