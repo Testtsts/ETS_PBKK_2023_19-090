@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use DB;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class RiwayatMedisController extends Controller
 {
@@ -14,6 +15,18 @@ class RiwayatMedisController extends Controller
         ["RiwayatMedis"=> $RiwayatMedis
         // ,"users"=> $Users
      ]);
+    }
+
+    public function riwayatMedisByPasienId(){
+        $id = Auth::id();
+        //select riwayat medis where pasien_id == user.id
+        $RiwayatMedisByPasienId = DB::table("")->where('pasien_id',$id);
+    }
+    
+    public function riwayatMedisByDokterId(){
+        $id = Auth::id();
+        //select riwayat medis where dokter_id == user.id
+        $RiwayatMedisByPasienId = DB::table("")->where('dokter_id',$id);
     }
     
 }
